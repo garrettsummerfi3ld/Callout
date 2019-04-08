@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Callout</string>
+    <string name="callout_button">Callout</string>
+    <string name="callout_title">Press the Callout button to reach out to your selected contacts</string>
+    <string name="phone_number_debug">Input phone number</string>
+    <string name="callout_message_debug_test">This is a test of the Callout system on the users phone, if you have received this, please ignore.</string>
 </resources>
