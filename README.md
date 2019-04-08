@@ -1,4 +1,7 @@
 # Callout
+
+[![Build Status](https://travis-ci.com/garrettsummerfi3ld/callout.svg?branch=master)](https://travis-ci.com/garrettsummerfi3ld/callout)
+
 An app to automatically reach out to your friends or family while in need
 
 There are times where you feel lonely and sad and also lost and broken, this app will try and rectify that problem by reaching out to people for you when you are looking for someone to talk to or vent
