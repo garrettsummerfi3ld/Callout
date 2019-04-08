@@ -21,4 +21,4 @@ cache:
     - $HOME/.gradle/wrapper/
     - $HOME/.android/build-cache
 
-script: gradlew build --info && gradlew assembleDebug --info
+script: chmod +x ./gradlew && ./gradlew build --stacktrace
