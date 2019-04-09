@@ -53,4 +53,10 @@
         app:layout_constraintTop_toBottomOf="@+id/calloutButton"
         tools:targetApi="o" />
 
+    <android.support.design.widget.BottomNavigationView
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:labelVisibilityMode="auto" />
+
 </android.support.constraint.ConstraintLayout>
