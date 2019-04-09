@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     // Global vars
-    EditText  debugPhoneNumber;
     Button  calloutButton;
 
     @Override
@@ -19,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Pulls values from the textbox in the main activity
-        debugPhoneNumber = (EditText) findViewById(R.id.debugPhoneNumberInput);
         calloutButton = (Button) findViewById(R.id.calloutButton);
     }
 
