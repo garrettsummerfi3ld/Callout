@@ -5,24 +5,19 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     // Global vars
     EditText  debugPhoneNumber;
-    Button  calloutButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Pulls values from the textbox in the main activity
         debugPhoneNumber = (EditText) findViewById(R.id.debugPhoneNumberInput);
-        calloutButton = (Button) findViewById(R.id.calloutButton);
     }
-
 
     // Triggered by pressing the callout button in the main activity
     public void calloutMessage(View view) {
