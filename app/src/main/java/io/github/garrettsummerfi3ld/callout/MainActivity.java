@@ -17,6 +17,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     // Global vars
     private static final int REQUEST_READ_CONTACTS = 79;
+    private static final int REQUEST_SEND_SMS = 79;
     SmsManager smsManager = SmsManager.getDefault();
 
     @Override
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             // SMS Handler
             smsManager.sendTextMessage(String.valueOf(R.string.callout_title), null, String.valueOf(R.string.callout_message_debug), null, null);
+            String calloutDebugPhoneInput = null;
             Log.i("calloutMessage", "Send message to number: '" + calloutDebugPhoneInput + "'!");
 
             // Confirmation toast and logging
