@@ -1,0 +1,3 @@
+package io.github.garrettsummerfi3ld.callout
+
+class ContactLoaderFragment
