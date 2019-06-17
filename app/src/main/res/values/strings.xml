@@ -8,4 +8,5 @@
     <string name="cancel_dialog">Cancel</string>
     <string name="contacts_perm_dialog">Callout requires usage of your contacts. This is to ensure the availability of those to contact. Please accept the permission otherwise Callout will not work as intended.</string>
     <string name="sms_perm_dialog">Callout requires usage of SMS. This is the main function of Callout to work as an SMS shortcut. Please accept the permission otherwise Callout will not work as intended.</string>
+    <string name="callout_button">callout_button</string>
 </resources>
