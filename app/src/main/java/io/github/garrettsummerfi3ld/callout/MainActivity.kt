@@ -7,6 +7,7 @@ import android.database.Cursor
 import android.net.Uri
 import android.provider.ContactsContract
 import android.support.v4.app.ActivityCompat
+import android.support.v4.app.FragmentActivity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.telephony.SmsManager
@@ -21,8 +22,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // On run, there is a check for permissions
-        // Run through Contact permissions first, then check for SMS
+        /**
+         * This is to request permissions for the phone for the app to work, without these permissions, the app will not
+         * function as normal
+         * @param READ_CONTACTS reads contacts for sending callouts to
+         * @param SEND_SMS sends SMS for sending callouts to the contacts
+         */
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
                 getContacts()
@@ -95,7 +100,8 @@ class MainActivity : AppCompatActivity() {
                 if (hasPhoneNumber > 0) {
                     output.append("\n First Name:$name")
                     // Query and loop for every phone number of the contact
-                    val phoneCursor = contentResolver.query(PhoneCONTENT_URI, null, "$Phone_CONTACT_ID = ?", arrayOf(contact_id), null)
+                    val phoneCursor = contentResolver.query(PhoneCONTENT_URI, null,
+                            "$Phone_CONTACT_ID = ?", arrayOf(contact_id), null)
                     while (phoneCursor!!.moveToNext()) {
                         phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(NUMBER))
                         output.append("\n Phone number:" + phoneNumber!!)
@@ -112,7 +118,9 @@ class MainActivity : AppCompatActivity() {
         // Try catch with SMS
         try {
             // SMS Handler
-            smsManager.sendTextMessage(R.string.callout_title.toString(), null, R.string.callout_message_debug.toString(), null, null)
+            smsManager.sendTextMessage(R.string.callout_title.toString(),
+                    null, R.string.callout_message_debug.toString(), null,
+                    null)
             val calloutDebugPhoneInput: String? = null
             Log.i("calloutMessage", "Send message to number: '$calloutDebugPhoneInput'!")
 
@@ -133,4 +141,12 @@ class MainActivity : AppCompatActivity() {
         private val REQUEST_READ_CONTACTS = 79
         private val REQUEST_SEND_SMS = 79
     }
+
+    class MainActivity : ContactLoaderFragment() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentVew(R.layout.fragment_contact_loader)
+        }
+    }
+
 }
