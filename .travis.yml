@@ -21,4 +21,9 @@ cache:
     - $HOME/.gradle/wrapper/
     - $HOME/.android/build-cache
 
-script: chmod +x ./gradlew && ./gradlew build --stacktrace
+script: 
+    - chmod +x ./gradlew
+    - ./gradlew build --stacktrace
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
