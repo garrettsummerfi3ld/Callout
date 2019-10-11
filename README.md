@@ -1,6 +1,6 @@
 # Callout
 
-[![Build Status](https://travis-ci.com/garrettsummerfi3ld/callout.svg?branch=master)](https://travis-ci.com/garrettsummerfi3ld/callout)
+[![Build Status](https://travis-ci.com/garrettsummerfi3ld/callout.svg?branch=master)](https://travis-ci.com/garrettsummerfi3ld/callout) ![GitHub Actions Status | garrettsummerfi3ld/callout](https://github.com/garrettsummerfi3ld/callout/workflows/Android/badge.svg)
 
 An app to automatically reach out to your friends or family while in need
 
