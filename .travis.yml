@@ -15,7 +15,4 @@ before_install:
   - chmod +x ./gradlew
 
 script:
-    - ./gradlew build --stacktrace
-
-after_success:
-- bash <(curl -s https://codecov.io/bash)
+    - ./gradlew clean testDebug lintDebug --info
