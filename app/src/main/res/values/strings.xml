@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">Callout</string>
-    <string name="callout_button">Callout</string>
-    <string name="callout_title">Press the Callout button to reach out to your selected contacts</string>
-    <string name="phone_number_debug">Input phone number</string>
 </resources>
