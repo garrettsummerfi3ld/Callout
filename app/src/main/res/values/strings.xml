@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Callout</string>
     <string name="title_text">Callout to selected contacts</string>
+    <string name="dialog_explain_permissions">placeholder</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
 </resources>

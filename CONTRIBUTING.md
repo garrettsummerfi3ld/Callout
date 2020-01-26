@@ -15,7 +15,7 @@ This project cannot be simply done alone, and I personally welcome changes, addi
 If you need further guidance, you can find our team on the following:
 
 * [Personal Email](garrettsummerfi3ld@gmail.com)
-* [Discord](https://discord.gg/NMkGWJY)
+* [Discord](https://discord.gg/fXD8Pd)
 
 Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
 
